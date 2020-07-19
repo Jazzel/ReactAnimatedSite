@@ -1,5 +1,18 @@
 /* Overlay style */
 
+@font-face {
+  font-family: "Geomanist-Black";
+  src: url("./Geomanist-Black.woff") format('woff');
+}
+@font-face {
+  font-family: "Geomanist-Bold";
+  src: url("./Geomanist-Bold.woff") format('woff');
+}
+
+@font-face {
+  font-family: "Intro-Light";
+  src: url("./Intro-Light.woff") format('woff');
+}
 body {
   overflow: hidden;
   margin: 0;
@@ -13,7 +26,7 @@ body {
 
 .trigger-container {
   height: 0px;
-  background-color: black;
+  background-color: #ea4134;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,35 +42,54 @@ body {
   border-radius: 50%;
   height: 100px;
   width: 100px;
-  background-color: red;
+  background-color: #ea4134;
   position: absolute;
   bottom: 100px;
 }
 
 .trigger-close {
   border-radius: 50%;
-  height: 100px;
-  width: 100px;
-  background-color: red;
+  border: none;
+  outline: none;
+  height: 90px;
+  width: 90px;
+  background-color: #383f42;
   margin-right: 20px;
   margin-left: 20px;
+  color: white;
+  padding: 10px;
 }
 
 .inner-container {
   position: absolute;
   height: 30%;
-  background-color: red;
+  background-color: #ea4134;
   top: 30px;
   width: 80%;
+  transition: opacity .25s ease-out;
 }
 
 .navigation {
-  height: 80%;
-  background-color: yellow;
+  height: 75%;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.navigation > ul {
+  list-style-type: none;
+}
+.navigation > ul > li {
+  font-size: 12vh;
+  line-height: .95;
+  font-family: Geomanist-Black;
+  font-weight: 400;
+  letter-spacing: -.1rem;
+  color: white;
 }
 .buttons-group {
-  background-color: teal;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -66,15 +98,48 @@ body {
 .social-buttons {
   border-radius: 50%;
   height: 100px;
+  border: none;
+  outline: none;
   margin-right: 10px;
   width: 100px;
+  background-color: transparent;
+  color: white;
 }
 
 .main-navigation {
-	height: 60px;
-	width: 100%;
-	background-color: red;
-	position: absolute;
-	top:0;
-	z-index: 3;
+  height: 60px;
+  width: 100%;
+  background-color: #ea4134;
+  position: absolute;
+  top: 0;
+  color: white;
+  z-index: 3;
+}
+.sub-content {
+  height: 60px;
+  width: 80%;
+  position: absolute;
+  top: 60px;
+  z-index: 2;
+}
+.icons {
+  font-size: 50px !important;
+}
+
+.main-icon {
+  font-size: 55px !important;
+}
+@media screen and (max-width: 425px) {
+  .trigger-close {
+    height: 70px;
+    width: 130px;
+  }
+
+.icons {
+  font-size: 35px !important;
+}
+
+.main-icon {
+  font-size: 40px !important;
+}
 }
